@@ -242,7 +242,7 @@ function languagetool#Check(line1, line2) "{{{1
   \ . (empty(s:languagetool_disable_categories) ? '' : ' --disablecategories '.s:languagetool_disable_categories)
   \ . (empty(s:languagetool_enable_categories) ?  '' : ' --enablecategories '.s:languagetool_enable_categories)
   \ . ' -l '    . s:languagetool_lang
-  \ . ' --api ' . l:tmpfilename
+  \ . ' --json '. l:tmpfilename
   \ . ' 2> '    . l:tmperror
 
   sil exe '%!' . l:languagetool_cmd
